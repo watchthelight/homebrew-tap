@@ -5,21 +5,21 @@
 class Hg < Formula
   desc "Hypergraph & HoTT tooling in Go"
   homepage "https://github.com/watchthelight/HypergraphGo"
-  version "1.7.1"
+  version "1.8.0-pre"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.7.1/hg_1.7.1_darwin_amd64.tar.gz"
-      sha256 "db95aa422d350ae40fba96aa4607e039e99a8730158aa98cf3962f95e3544f26"
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.0-pre/hg_1.8.0-pre_darwin_amd64.tar.gz"
+      sha256 "d1b4241deebda6f9dd77c3f948a8259e1f7286f78ca7b91e2a72ade0fb4f806f"
 
       def install
         bin.install "hg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.7.1/hg_1.7.1_darwin_arm64.tar.gz"
-      sha256 "6fb07ca916ece95b0267e8f16463697cb37aa1d5bf64fb5367bb61ac6b0bb31a"
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.0-pre/hg_1.8.0-pre_darwin_arm64.tar.gz"
+      sha256 "13ae38ebba1518aca05f40e4b86caa2a113385d666e4dff633b9042b7b092113"
 
       def install
         bin.install "hg"
@@ -29,15 +29,15 @@ class Hg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.7.1/hg_1.7.1_linux_amd64.tar.gz"
-      sha256 "40eeef3d87a2493dd95893997c2c63a5e8d7baedaf52e895679a5979cd990078"
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.0-pre/hg_1.8.0-pre_linux_amd64.tar.gz"
+      sha256 "47fd73d5c980fcb243c9172b977e3f38dc57b1eaf525bf74471f24bc9c9d7c3d"
       def install
         bin.install "hg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.7.1/hg_1.7.1_linux_arm64.tar.gz"
-      sha256 "b6f9a5b8fe26ce62a3e389332abb769f45fc066d7dc53e0ade896e8a16b79eab"
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.0-pre/hg_1.8.0-pre_linux_arm64.tar.gz"
+      sha256 "c8dbaf2217afcea4d8acedd304dbf26c3dd75e40aa4b6415f2d5449dc045fc5a"
       def install
         bin.install "hg"
       end
