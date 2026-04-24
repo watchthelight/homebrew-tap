@@ -5,41 +5,45 @@
 class Hg < Formula
   desc "Hypergraph & HoTT tooling in Go"
   homepage "https://github.com/watchthelight/HypergraphGo"
-  version "1.8.2"
+  version "1.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.2/hg_1.8.2_darwin_amd64.tar.gz"
-      sha256 "68ad9c619ab638f78fc6b2645b0e09acb2f1c93b11a4b0e2bc098da9da54ad35"
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.9.0/hg_1.9.0_darwin_amd64.tar.gz"
+      sha256 "13a0f28dff984368fdb225f99e4139f84dea3b8f6b1528eb4e1e4d5dcdcc4434"
 
-      def install
+      define_method(:install) do
         bin.install "hg"
+        bin.install "hottgo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.2/hg_1.8.2_darwin_arm64.tar.gz"
-      sha256 "39669e30a01b634fb23614fd16fda885502d8a2cf5f5683f8b41b65f99345c98"
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.9.0/hg_1.9.0_darwin_arm64.tar.gz"
+      sha256 "75c2497e4ee731154e7bc456da11614fcceb60d997b8f10ac5ad1faec868326e"
 
-      def install
+      define_method(:install) do
         bin.install "hg"
+        bin.install "hottgo"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.2/hg_1.8.2_linux_amd64.tar.gz"
-      sha256 "a84a550bdd768bd399f888aad6f34bfa4e982dbededd938f3ab4610b35a3eb96"
-      def install
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.9.0/hg_1.9.0_linux_amd64.tar.gz"
+      sha256 "5563841a64203aedec42b3737d3b13893065df6fb2232069e005cd8fed1c1df0"
+      define_method(:install) do
         bin.install "hg"
+        bin.install "hottgo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.8.2/hg_1.8.2_linux_arm64.tar.gz"
-      sha256 "d7e7948fd919dd439288b05cc744ca241965b6c0371d40f80fb6ec2c05185001"
-      def install
+      url "https://github.com/watchthelight/HypergraphGo/releases/download/v1.9.0/hg_1.9.0_linux_arm64.tar.gz"
+      sha256 "f8ea6670389d271e42658b7e5f1e4a5a43343e5777e0faeb01ab3af11a1ed814"
+      define_method(:install) do
         bin.install "hg"
+        bin.install "hottgo"
       end
     end
   end
